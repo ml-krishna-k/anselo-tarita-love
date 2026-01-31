@@ -1,0 +1,7 @@
+export default function Birthday() {
+    return (
+        <div className="flex items-center justify-center min-h-[50vh] text-center">
+            <h2 className="text-4xl font-heading text-charcoal/50">Birthday Wishes Coming Soon</h2>
+        </div>
+    );
+}
