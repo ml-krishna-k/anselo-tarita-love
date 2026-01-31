@@ -1,7 +1,7 @@
 import type { GalleryItem } from "../types/gallery";
 
 // Using query param for Vite asset handling
-const images = import.meta.glob('../assets/images/gallery/*.(jpg|JPG|png|PNG|heic|HEIC)', { eager: true, query: '?url', import: 'default' });
+const images = import.meta.glob('../assets/images/gallery/*.(jpg|JPG|png|PNG)', { eager: true, query: '?url', import: 'default' });
 
 export const galleryData: GalleryItem[] = Object.entries(images)
     .filter(([path]) => {

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 // Load all images from the couple folder
-const images = import.meta.glob('../../../assets/images/couple/*.(jpg|JPG|png|PNG|heic|HEIC)', { eager: true, query: '?url', import: 'default' });
+const images = import.meta.glob('../../../assets/images/couple/*.(jpg|JPG|png|PNG)', { eager: true, query: '?url', import: 'default' });
 
 export const PhotoGrid = () => {
     // Convert generic object to array of URLs
