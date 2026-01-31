@@ -1,8 +1,4 @@
 import type { TimelineEvent } from "../types/timeline";
-import firstVideo from "../assets/videos/First video of us.MP4";
-import busVideo from "../assets/videos/47D Bus Ride video.MP4";
-import autoVideo from "../assets/videos/Autoride Video.MP4";
-import recreationVideo from "../assets/videos/first video recreation.MP4";
 
 export const timelineData: TimelineEvent[] = [
     // SECTION: SECOND CHANCE
@@ -13,7 +9,7 @@ export const timelineData: TimelineEvent[] = [
         description: "After years apart, paths crossed again unexpectedly. A simple message sparked a conversation that would change everything.",
         section: "SECOND_CHANCE",
         highlight: true,
-        media: { type: "video", url: firstVideo }
+        media: { type: "video", url: "https://drive.google.com/file/d/1VZgbE_hJ6KurZR7wqNYv57KyD94igxeW/preview" } // First video of us
     },
     {
         id: "2",
@@ -21,7 +17,7 @@ export const timelineData: TimelineEvent[] = [
         title: "The 47D Bus Ride",
         description: "That ordinary bus ride became extraordinary. Sitting next to you, the world faded away.",
         section: "SECOND_CHANCE",
-        media: { type: "video", url: busVideo }
+        media: { type: "video", url: "https://drive.google.com/file/d/1BU7_t0AANIUWE5DZ6UW0HlT9qkioVBmr/preview" } // 47D Bus Ride
     },
 
     // SECTION: LOVE CONFESSION
@@ -39,7 +35,7 @@ export const timelineData: TimelineEvent[] = [
         title: "The Auto Ride",
         description: "Wind in our hair, chaos of the city around us, but all I could focus on was your smile in that auto.",
         section: "LOVE_CONFESSION",
-        media: { type: "video", url: autoVideo }
+        media: { type: "video", url: "https://drive.google.com/file/d/1NBIyxPgOIL9kpUnpgFh7sTEuNiScixjE/preview" } // Auto Ride
     },
 
     // SECTION: LIFE TOGETHER
@@ -49,6 +45,7 @@ export const timelineData: TimelineEvent[] = [
         title: "Building a Life",
         description: "Moving cities, finding a new home, and the joy of waking up next to each other every day.",
         section: "LIFE_TOGETHER",
+        media: { type: "video", url: "https://drive.google.com/file/d/1SJGPheh_FuBWHo3LL7EcUPxlrB8ROIbh/preview" } // Being together edit
     },
     {
         id: "6",
@@ -57,6 +54,6 @@ export const timelineData: TimelineEvent[] = [
         description: "Recreating our first memories, proving that my love for you has only grown deeper with time.",
         section: "LIFE_TOGETHER",
         highlight: true,
-        media: { type: "video", url: recreationVideo }
+        media: { type: "video", url: "https://drive.google.com/file/d/18mlxqHe1OL0MduxY0jBwMT6TWiOg4_0J/preview" } // First video recreation
     },
 ];

@@ -9,7 +9,8 @@ import funny2 from "../../assets/images/gallery/funny pic 2.JPG";
 import funny3 from "../../assets/images/gallery/funny pic 3.jpg";
 
 const FloatingBubbles = () => {
-    const images = [funny1, funny2, funny3, funny1, funny2, funny3, funny1, funny2, funny3]; // Tripled
+    // Reduced count for better performance on mobile
+    const images = [funny1, funny2, funny3, funny1, funny2];
     return (
         <div className="absolute inset-0 pointer-events-none overflow-hidden h-full z-0">
             {images.map((img, i) => (

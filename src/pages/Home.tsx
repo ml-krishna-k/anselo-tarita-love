@@ -58,9 +58,9 @@ export default function Home() {
                             The Love of a Lifetime
                         </motion.h2>
 
-                        <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading text-charcoal leading-tight tracking-tight">
+                        <h1 className="text-5xl md:text-8xl lg:text-9xl font-heading text-charcoal leading-tight tracking-tight">
                             <span className="block">{siteConfig.title.split(" & ")[0]}</span>
-                            <span className="block text-4xl md:text-6xl italic font-serif my-2 text-charcoal/40">&</span>
+                            <span className="block text-3xl md:text-6xl italic font-serif my-2 text-charcoal/40">&</span>
                             <span className="block">{siteConfig.title.split(" & ")[1]}</span>
                         </h1>
 

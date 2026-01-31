@@ -49,10 +49,18 @@ export const TimelineItem = ({ event, isLeft }: TimelineItemProps) => {
                 <div className="relative z-10 p-6 md:p-8">
                     {/* Media render */}
                     {event.media && event.media.type === 'video' && (
-                        <div className="mb-4 rounded-xl overflow-hidden shadow-inner bg-black/5">
-                            <video autoPlay loop muted playsInline className="w-full max-h-60 object-cover">
-                                <source src={event.media.url} type="video/mp4" />
-                            </video>
+                        <div className="mb-4 rounded-xl overflow-hidden shadow-inner bg-black/5 aspect-video relative">
+                            {event.media.url.includes("drive.google.com") ? (
+                                <iframe
+                                    src={`${event.media.url.replace('/view', '/preview')}`}
+                                    className="w-full h-full absolute inset-0 border-0"
+                                    allowFullScreen
+                                ></iframe>
+                            ) : (
+                                <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                                    <source src={event.media.url} type="video/mp4" />
+                                </video>
+                            )}
                         </div>
                     )}
                     {event.media && event.media.type === 'image' && (
