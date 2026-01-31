@@ -4,7 +4,7 @@ import { MusicController } from "../features/music/MusicController";
 
 export default function App() {
     return (
-        <div className="min-h-screen bg-pearl text-charcoal font-body selection:bg-rose selection:text-white flex flex-col relative">
+        <div className="min-h-screen bg-love-pink text-charcoal font-body selection:bg-rose selection:text-white flex flex-col relative">
             <div className="bg-noise" />
             <MusicController />
             <MusicToggle />

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-pearl text-charcoal font-body antialiased overflow-x-hidden;
+    @apply bg-love-pink text-charcoal font-body antialiased overflow-x-hidden;
   }
 
   h1,

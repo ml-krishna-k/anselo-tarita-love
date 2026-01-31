@@ -18,7 +18,7 @@ export default function Home() {
                 {/* Background Video */}
                 <div className="absolute inset-0 z-0 overflow-hidden">
                     {/* Placeholder for background video if desired, but using gradients for now for performance/elegance */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-pearl/80 via-pearl/60 to-pearl z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-white/20 z-10" />
                     {/* You could put a looping video here if you want: */}
                     {/* <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover opacity-30">
                          <source src="/assets/videos/First video of us.MP4" type="video/mp4" />

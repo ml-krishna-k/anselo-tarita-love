@@ -11,6 +11,7 @@ export default {
         rose: "#FCD5CE",
         beige: "#FAE1DD",
         pearl: "#F8EDEB",
+        "love-pink": "#FFB6C1",
         charcoal: "#333333",
       },
       fontFamily: {
