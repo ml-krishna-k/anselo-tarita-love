@@ -13,15 +13,29 @@ export const MusicController = () => {
         audio.volume = isMuted ? 0 : volume;
         audioRef.current = audio;
 
+        // Add event listeners for debugging
+        const handleError = (e: Event) => {
+            console.error("Audio playback error:", e);
+        };
+
+        const handleCanPlay = () => {
+            console.log("Audio is ready to play");
+        };
+
+        audio.addEventListener('error', handleError);
+        audio.addEventListener('canplaythrough', handleCanPlay);
+
         // Attempt playback if state says playing
         if (isPlaying) {
-            audio.play().catch(() => {
-                // Autoplay blocked
+            audio.play().catch((error) => {
+                console.warn("Autoplay blocked:", error);
                 setIsPlaying(false);
             });
         }
 
         return () => {
+            audio.removeEventListener('error', handleError);
+            audio.removeEventListener('canplaythrough', handleCanPlay);
             audio.pause();
             audio.src = "";
             audioRef.current = null;
@@ -35,13 +49,20 @@ export const MusicController = () => {
 
         audio.volume = isMuted ? 0 : volume;
 
-        if (isPlaying && audio.paused) {
-            audio.play().catch(e => {
-                console.warn("Autoplay blocked or playback failed:", e);
-                setIsPlaying(false);
-            });
-        } else if (!isPlaying && !audio.paused) {
-            audio.pause();
+        if (isPlaying) {
+            if (audio.paused) {
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(e => {
+                        console.warn("Playback failed:", e);
+                        setIsPlaying(false);
+                    });
+                }
+            }
+        } else {
+            if (!audio.paused) {
+                audio.pause();
+            }
         }
     }, [isPlaying, isMuted, volume, setIsPlaying]);
 
