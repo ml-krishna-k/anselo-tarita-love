@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useMusicStore } from "../../store/useMusicStore";
 
-// Using public folder path with BASE_URL for production support
-const bgMusic = `${import.meta.env.BASE_URL}music/audio.mp4`;
+import bgMusic from "../../audio.mp4";
 
 export const MusicController = () => {
     const { isPlaying, isMuted, volume, setIsPlaying } = useMusicStore();
